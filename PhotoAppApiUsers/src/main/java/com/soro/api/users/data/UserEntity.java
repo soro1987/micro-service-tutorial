@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class UserEntity implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(nullable=false, length=50)
