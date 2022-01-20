@@ -1,6 +1,9 @@
 package com.soro.api.users.shared;
 
+import com.soro.api.users.ui.controllers.model.AlbumResponseModel;
+
 import java.io.Serializable;
+import java.util.List;
 
 public class UserDto implements Serializable {
 
@@ -12,7 +15,7 @@ public class UserDto implements Serializable {
     private String password;
     private String userId;
     private String encryptedPassword;
-//    private List<AlbumResponseModel> albums;
+    private List<AlbumResponseModel> albums;
 
 
     public String getFirstName() {
@@ -63,11 +66,11 @@ public class UserDto implements Serializable {
         this.encryptedPassword = encryptedPassword;
     }
 
-//    public List<AlbumResponseModel> getAlbums() {
-//        return albums;
-//    }
-//
-//    public void setAlbums(List<AlbumResponseModel> albums) {
-//        this.albums = albums;
-//    }
+    public List<AlbumResponseModel> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(List<AlbumResponseModel> albums) {
+        this.albums = albums;
+    }
 }
